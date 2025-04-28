@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Home from "@/pages/Home";  // Cleaner absolute path
-import Activity from "@/pages/Activity";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Activity from "./pages/Activity";
 
 // Remove this duplicate declaration
 // const Home = () => <h1>Home Page</h1>;
