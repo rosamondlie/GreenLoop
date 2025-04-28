@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.home-container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: green;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.logo img {
+    width: 30px;
+}
+
+.user-info {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.pickup-status .pickup-button {
+    width: 100%;
+    padding: 10px;
+    background: lightgreen;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.points-card {
+    background: #f0fff0;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.points-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.history-btn, .redeem-btn {
+    background: lightgreen;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pickup-cta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.book-now {
+    background: green;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.news-update {
+    margin-top: 20px;
+}
+
+.news-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.news-img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}

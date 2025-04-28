@@ -1,13 +1,12 @@
+// vite.config.js
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-    plugins: [
-        laravel({
-            input: ['resources/js/app.jsx'], // Ensure this path is correct
-            refresh: true,
-        }),
-        react(),
-    ],
+    plugins: [laravel(['resources/js/app.jsx'])],
+    resolve: {
+        alias: {
+            '@': '/resources/js',  // Lets you use "@/pages/Home"
+        },
+    },
 });
