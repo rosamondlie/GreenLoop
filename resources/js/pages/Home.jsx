@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import "../../css/home.css"; // Corrected path
 
 const Home = () => {
+    const navigate = useNavigate();
     return (
         <div className="home-container">
             <header className="header">
@@ -46,7 +48,7 @@ const Home = () => {
 
             <nav className="bottom-nav">
                 <button>🏠 Home</button>
-                <button>📊 Activity</button>
+                <button onClick={() => navigate('/activity')}>📊 Activity</button>
                 <button>🎁 Redeem</button>
             </nav>
         </div>

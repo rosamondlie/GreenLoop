@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.activity-container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.headerA {
+    justify-content: space-between;
+    align-items: center;
+    background: #C0EBA6;
+    color: green;
+    padding: 10px 18px;
+    border-radius: 10px;
+
+}
+
+.headerA .tabs{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 20px 0;
+}
+
+.tabs button{
+    padding: 3px 10px;
+    border-radius: 16px;
+    border: none;
+    background-color: #FFFBE6;
+    color: green;
+    font-weight: bold;
+}
+
+.tabs button.active {
+    background-color: #4CAF50; /* Green color when active */
+    color: white;
+}
