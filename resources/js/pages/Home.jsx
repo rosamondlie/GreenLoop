@@ -49,6 +49,76 @@ const Home = () => {
                 <button>📊 Activity</button>
                 <button>🎁 Redeem</button>
             </nav>
+
+            <section className="priviledge-container">
+                <h2 className="tulisan-priv">Privilege</h2>
+                <div className="privilege-header">
+                    <p>Redeem now. Enjoy the treats-!</p>
+                    <a href="#">See all</a>
+                </div>
+            </section>
+
+            <section className="voucher-container">
+                <div className="voucher-list">
+                    <div className="kopi-kenangan">
+                        <img src="/images/kopi-kenangan.jpg" alt="" />
+                        <p>Kopi Kenangan</p>
+                        <p2>Free Coffee</p2>
+                    </div>
+
+                    <div className="KFC">
+                        <img src="/images/KFC.png" alt="" />
+                        <p>KFC</p>
+                        <p2>25% OFF</p2>
+                    </div>
+
+                    <div className="McDonalds">
+                        <img src="/images/McDonalds.png" alt="" />
+                        <p>McDonalds</p>
+                        <p2>25% OFF</p2>
+                    </div>
+
+                    <div className="Vapiano">
+                        <img src="/images/Vapiano.jpg" alt="" />
+                        <p>Vapiano</p>
+                        <p2>50% OFF</p2>
+                    </div>
+                </div>
+            </section>
+
+            <section className="voucher-container2">
+                <div className="voucher-list2">
+                    <div className="MilkLife">
+                        <img src="/images/MilkLife.png" alt="" />
+                        <p>Milk Life Susu UHT 1L</p>
+                        <div className="pts">20 points</div>
+                    </div>
+
+                    <div className="tropicana-minyak">
+                        <img src="/images/TropicanaMinyak.png" alt="" />
+                        <p>Tropicana Slim Minyak Goreng 946 ml</p>
+                        <div className="pts">100 points</div>
+                    </div>
+
+                    <div className="bango">
+                        <img src="/images/bango.png" alt="" />
+                        <p>Bango Kecap Manis 520 ml</p>
+                        <div className="pts">50 points</div>
+                    </div>
+
+                    <div className="gula-pasir">
+                        <img src="/images/gula.png" alt="" />
+                        <p>Gulaku Gula Pasir Premium 1kg</p>
+                        <div className="pts">80 points</div>
+                    </div>
+
+                    <div className="sania-beras">
+                        <img src="/images/beras.png" alt="" />
+                        <p>Sania Beras Premium 2.5kg</p> 
+                        <div className="pts">120 points</div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };

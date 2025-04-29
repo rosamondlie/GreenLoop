@@ -1,8 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
+    height: 100%;
 }
 
 .home-container {
@@ -99,7 +98,7 @@ body {
     border-radius: 5px;
 }
 
-.bottom-nav {
+/* .bottom-nav {
     display: flex;
     justify-content: space-around;
     background: white;
@@ -108,4 +107,101 @@ body {
     bottom: 0;
     width: 100%;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+} */
+
+.privilege-container {
+    width: 100%;
+}
+
+.tulisan-priv {
+    font-size: 18px;
+    color: #347928;
+    font-weight: bold;
+    padding-top: 50px;
+    margin: 0;
+}
+  
+.privilege-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.privilege-header p{
+    font-size: 12px;
+    color: #347928;
+    margin: 0;
+}
+  
+.privilege-header a {
+    font-size: 12px;
+    color: #228B22;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.voucher-container, .voucher-container2 {
+    width: 100%;
+    overflow-x: auto;
+    padding-top: 8px;
+}
+
+.voucher-list, .voucher-list2 {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.kopi-kenangan, .KFC, .McDonalds, .Vapiano {
+    display: flex;
+    flex-direction: column; 
+    padding: 10px;
+}
+  
+.kopi-kenangan img, .KFC img, .McDonalds img, .Vapiano img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+}
+
+.kopi-kenangan p, .KFC p, .McDonalds p, .Vapiano p{
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.kopi-kenangan p2, .KFC p2, .McDonalds p2, .Vapiano p2{
+    margin: 0;
+    font-size: 14px;
+}
+
+.voucher-list2 p{
+    font-size: 12px;
+}
+
+.MilkLife, .tropicana-minyak, .bango, .gula-pasir, .sania-beras {
+    border: 0px solid;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 16px;
+    margin: 12px;
+  /* transition: box-shadow 0.3s ease; */
+}
+
+.pts {
+    background-color: #347928;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    width: fit-content;
+    margin: 8px auto 0 auto;
+    font-size: 8px;
+}
+
+.voucher-container::-webkit-scrollbar, .voucher-container2::-webkit-scrollbar {
+    display: none;
 }
