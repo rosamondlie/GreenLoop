@@ -13,7 +13,7 @@ const App = () => {
     return (
         <Router>
             <nav>
-                <Link to="/">Home</Link> | <Link to="/about">About</Link>
+                <Link to="/">Home</Link> | <Link to="/about">About</Link> | <Link to="/activity">Activity</Link>
             </nav>
             <Routes>
                 <Route path="/" element={<Home />} />

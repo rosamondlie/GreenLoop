@@ -41,10 +41,11 @@ export default function Activity() {
           <div className="scheduled-content">
             <div className="scheduled-card">
               <div className="calendar-icon">
-                📅
+              <img src="/images/calender.png" alt="" />
               </div>
               <div className="scheduled-text">
-                No scheduled pick up yet...
+                Scheduled Pick Up
+                <h5>on Wednesday, 5 March 2025 at 19:00 - 21:00</h5>
               </div>
             </div>
           </div>
@@ -56,10 +57,21 @@ export default function Activity() {
           <div className="scheduled-content">
             <div className="scheduled-card">
               <div className="calendar-icon">
-                📅
+                ✅
               </div>
               <div className="scheduled-text">
-                No history pick up yet...
+                5 Mar 2025, 19:30
+                <h5>Trash sent successfully</h5>
+              </div>
+            </div>
+            
+            <div className="scheduled-card">
+              <div className="calendar-icon">
+                ✅
+              </div>
+              <div className="scheduled-text">
+                27 Feb 2025, 15:21
+                <h5>Trash sent successfully</h5>
               </div>
             </div>
           </div>
