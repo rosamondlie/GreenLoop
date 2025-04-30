@@ -15,14 +15,15 @@ const Home = () => {
             </header>
             
                 <div className="user-info">
-                    <div className="user-greeting"><p>Hi! Rayya Al Ghazali</p></div>
+                    <div className="user-greeting">
+                        <p>Hi! Rayya Al Ghazali</p></div>
                     <button className="icon-button"><img src="images/notif.png" alt="Notifications" /></button>
                     <button className="icon-button"><img src="images/profile.png" alt="Profile" /></button> 
                 </div>
 
             <section className="pickup-status">
                 <div className="status-card">
-                    <p>No Scheduled Pick Up Today!</p>
+                    <p>No Scheduled Pick Up Today! <img src="images/trash.png" alt="" /></p>
                 </div>
             </section>
 
