@@ -57,7 +57,7 @@ export default function Activity() {
           <div className="scheduled-content">
             <div className="scheduled-card">
               <div className="calendar-icon">
-                ✅
+              <img src="/images/checkmark.png" alt="" />
               </div>
               <div className="scheduled-text">
                 5 Mar 2025, 19:30
@@ -67,7 +67,7 @@ export default function Activity() {
             
             <div className="scheduled-card">
               <div className="calendar-icon">
-                ✅
+              <img src="/images/checkmark.png" alt="" />
               </div>
               <div className="scheduled-text">
                 27 Feb 2025, 15:21

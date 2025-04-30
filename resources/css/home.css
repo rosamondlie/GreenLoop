@@ -65,15 +65,19 @@ body {
 }
 
 .tagline {
+    margin: 0;
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.8);
+    opacity: 0.8;
 }
 
 .user-info {
     display: flex;
-    flex-direction: ;
-    align-items: flex-end;
-    gap: 0%;
+    gap: 12px;
+    flex-direction: row;
+    border-radius: 500px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
 }
 
 .greeting {
