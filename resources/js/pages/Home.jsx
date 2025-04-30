@@ -1,5 +1,5 @@
 import React from "react";
-import "../../css/home.css"; // Corrected path
+import "../../css/home.css"; 
 
 const Home = () => {
     return (
@@ -7,46 +7,56 @@ const Home = () => {
             <header className="header">
                 <div className="logo">
                     <img src="images/logo.png" alt="GreenLoop" />
-                    <h3>GreenLoop</h3>
-                    <p>Small choices shape a cleaner future.</p>
+                    <div className="logo-text">
+                        <h3>GreenLoop</h3>
+                        <p className="tagline">Small choices shape a cleaner future</p>
+                    </div>
                 </div>
             </header>
-
-            <div className="user-info">
-                    <p>Hi! Rayya Al Ghazali</p>
-                    <button className="icon-button"><img src="images/notif.png" alt="" /></button>
-                    <button className="icon-button"><img src="images/profile.png" alt="" /></button>
+            
+                <div className="user-info">
+                    <div className="user-greeting"><p>Hi! Rayya Al Ghazali</p></div>
+                    <button className="icon-button"><img src="images/notif.png" alt="Notifications" /></button>
+                    <button className="icon-button"><img src="images/profile.png" alt="Profile" /></button> 
                 </div>
 
             <section className="pickup-status">
-                <p>No Scheduled Pick Up Today!</p>
+                <div className="status-card">
+                    <p>No Scheduled Pick Up Today!</p>
+                </div>
             </section>
 
             <section className="points-card">
-                <h3>Poin <i>balance</i></h3>
-                <p><strong>103</strong> poin(s)</p>
-                <p className="expiry">expired date 13/07/2026</p>
+                <h3 className="points-title">Poin balance</h3>
+                <div className="points-display">
+                    <span className="points-number">103</span>
+                    <span className="points-unit">poin(s)</span>
+                </div>
+                <p className="expiry-date">expired date 13/07/2026</p>
                 <div className="points-actions">
-                    <button className="history-btn"> History</button>
-                    <button className="redeem-btn"> Redeem</button>
+                    <button className="history-btn">History</button>
+                    <span className="divider">|</span>
+                    <button className="redeem-btn">Redeem</button>
                 </div>
             </section>
 
             <section className="pickup-cta">
-                <p>Let us take care of your waste — schedule a pickup today!</p>
-                <button className="book-now">🚛 Book now</button>
+                <p className="cta-text">Let us take care of your waste — schedule a pickup today!</p>
+                <button className="book-now">Book now</button>
             </section>
 
             <section className="news-update">
                 <h3>News Update</h3>
-                <p>What's Happening in Waste Management Today?</p>
-                <div className="news-container">
-                    <img src="/news1.jpg" alt="News" className="news-img"/>
-                    <img src="/news2.jpg" alt="News" className="news-img"/>
+                <p className="news-subtitle">What's Happening in Waste Management Today?</p>
+                <div className="news-grid">
+                    <div className="news-item">
+                        <div className="news-placeholder">☐ News</div>
+                    </div>
+                    <div className="news-item">
+                        <div className="news-placeholder">☐ News</div>
+                    </div>
                 </div>
             </section>
-
-  
 
             <section className="priviledge-container">
                 <h2 className="tulisan-priv">Privilege</h2>
