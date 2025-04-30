@@ -6,18 +6,20 @@ const Home = () => {
         <div className="home-container">
             <header className="header">
                 <div className="logo">
-                    <img src="/logo.png" alt="GreenLoop" />
+                    <img src="images/logo.png" alt="GreenLoop" />
+                    <h3>GreenLoop</h3>
                     <p>Small choices shape a cleaner future.</p>
-                </div>
-                <div className="user-info">
-                    <p>Hi! Rayya Al Ghazali</p>
-                    <button className="icon-button">🔔</button>
-                    <button className="icon-button">👤</button>
                 </div>
             </header>
 
+            <div className="user-info">
+                    <p>Hi! Rayya Al Ghazali</p>
+                    <button className="icon-button"><img src="images/notif.png" alt="" /></button>
+                    <button className="icon-button"><img src="images/profile.png" alt="" /></button>
+                </div>
+
             <section className="pickup-status">
-                <button className="pickup-button">No Scheduled Pick Up Today! 🗑️</button>
+                <p>No Scheduled Pick Up Today!</p>
             </section>
 
             <section className="points-card">
@@ -25,8 +27,8 @@ const Home = () => {
                 <p><strong>103</strong> poin(s)</p>
                 <p className="expiry">expired date 13/07/2026</p>
                 <div className="points-actions">
-                    <button className="history-btn">🔄 History</button>
-                    <button className="redeem-btn">🎁 Redeem</button>
+                    <button className="history-btn"> History</button>
+                    <button className="redeem-btn"> Redeem</button>
                 </div>
             </section>
 
@@ -44,11 +46,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <nav className="bottom-nav">
-                <button>🏠 Home</button>
-                <button>📊 Activity</button>
-                <button>🎁 Redeem</button>
-            </nav>
+  
 
             <section className="priviledge-container">
                 <h2 className="tulisan-priv">Privilege</h2>
@@ -119,6 +117,21 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            <nav className="bottom-nav">
+                <button className="nav-btn active">
+                    <span className="nav-icon"><img src="images/list.png" alt="" /></span>
+                    <span className="nav-label">Activity</span>
+                </button>
+                <button className="nav-btn">
+                    <span className="nav-icon"><img src="images/home.png" alt="" /></span>
+                    <span className="nav-label">Home</span>
+                </button>
+                <button className="nav-btn">
+                    <span className="nav-icon"><img src="images/redeem.png" alt="" /></span>
+                    <span className="nav-label">Redeem</span>
+                </button>
+            </nav>
         </div>
     );
 };
