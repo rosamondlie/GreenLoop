@@ -56,7 +56,7 @@ export default function Activity() {
         {activeTab === 'History' && (
           <div className="scheduled-content">
             <div className="scheduled-card">
-              <div className="calendar-icon">
+              <div className="checkmark">
               <img src="/images/checkmark.png" alt="" />
               </div>
               <div className="scheduled-text">
@@ -66,7 +66,7 @@ export default function Activity() {
             </div>
             
             <div className="scheduled-card">
-              <div className="calendar-icon">
+              <div className="checkmark">
               <img src="/images/checkmark.png" alt="" />
               </div>
               <div className="scheduled-text">
@@ -79,21 +79,20 @@ export default function Activity() {
       </div>
 
 
-      {/* Bottom Navigation */}
-      <div className="bottom-nav">
-        <button className="nav-button">
-          📊
-          <span className="nav-text">Activity</span>
-        </button>
-        <button className="nav-button">
-          🏠
-          <span className="nav-text">Home</span>
-        </button>
-        <button className="nav-button">
-          🎁
-          <span className="nav-text">Redeem</span>
-        </button>
-      </div>
+      <nav className="bottom-nav">
+                <button className="nav-btn active">
+                    <span className="nav-icon"><img src="images/list.png" alt="" /></span>
+                    <span className="nav-label">Activity</span>
+                </button>
+                <button className="nav-btn">
+                    <span className="nav-icon"><img src="images/home.png" alt="" /></span>
+                    <span className="nav-label">Home</span>
+                </button>
+                <button className="nav-btn">
+                    <span className="nav-icon"><img src="images/redeem.png" alt="" /></span>
+                    <span className="nav-label">Redeem</span>
+                </button>
+            </nav>
     </div>
   );
 
