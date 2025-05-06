@@ -42,9 +42,13 @@ const Home = () => {
             </section>
 
             <section className="pickup-cta">
+            <img src="/images/gambargojek.png" alt="" />
+            <div className="cta-right">
                 <p className="cta-text">Let us take care of your waste — schedule a pickup today!</p>
                 <button className="book-now">Book now</button>
+            </div>
             </section>
+
 
             <section className="news-update">
                 <h3>News Update</h3>

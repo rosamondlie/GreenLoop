@@ -193,24 +193,38 @@ body {
 .pickup-cta {
     padding: 16px;
     margin: 16px;
-    background-color: var(--primary-light);
-    border-radius: 8px;
-    color: white;
-    text-align: center;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
+.pickup-cta img {
+    width: 110px;
+    height: 115px;
+}
+
+/* bagian kanan pick up cta */
+.cta-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .cta-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #347928;
+    text-align: right;
     margin-bottom: 12px;
-    font-size: 14px;
 }
 
 .book-now {
-    background-color: white;
-    color: var(--primary-color);
+    background-color: #347928;
     border: none;
     padding: 8px 16px;
-    border-radius: 4px;
+    border-radius: 50px;
     font-weight: bold;
+    color: white;
 }
 
 /* News Section - Modified */
