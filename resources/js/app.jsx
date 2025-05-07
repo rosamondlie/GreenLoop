@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import Home from "@/pages/Home";  // Cleaner absolute path
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Activity from "./pages/Activity";
+import Pickup from "@/pages/Pickup"; // Adjust path if necessary
 
 // Remove this duplicate declaration
 // const Home = () => <h1>Home Page</h1>;
@@ -15,12 +16,17 @@ const App = () => {
     return (
         <Router>
             <nav>
-                <Link to="/">Home</Link> | <Link to="/about">About</Link>
+                <Link to="/">Home</Link> |
+                <Link to="/activity">Activity</Link> | 
+                <Link to="/login">Login</Link> | 
+                <Link to="/register">Register</Link> | 
+                <Link to="/pickup">Pickup</Link>
             </nav>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
                 <Route path="/activity" element={<Activity />} />
+                <Route path="/pickup" element={<Pickup />} />
+
             </Routes>
         </Router>
     );

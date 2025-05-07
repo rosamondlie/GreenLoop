@@ -1,0 +1,407 @@
+/* home.css - FULL FILE WITH MODIFIED HEADER TO NEWS SECTION ONLY */
+:root {
+    --primary-color: #2e7d32;
+    --primary-light: #60ad5e;
+    --primary-dark: #005005;
+    --secondary-color: #ffc107;
+    --background: #f5f5f5;
+    --surface: #ffffff;
+    --error: #d32f2f;
+    --text-primary: rgba(0, 0, 0, 0.87);
+    --text-secondary: rgba(0, 0, 0, 0.6);
+    --text-hint: rgba(0, 0, 0, 0.38);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-lg: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+    --border-radius: 12px;
+    --spacing-unit: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-primary);
+}
+
+.home-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: var(--surface);
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 72px;
+}
+
+/* ===== MODIFIED SECTION (HEADER TO NEWS) STARTS HERE ===== */
+/* Header Styles - Modified */
+.header img {
+    display: flex;
+    align-items: center;
+    padding: -16px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-text h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.tagline {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.user-info {
+    display: flex;
+    gap: 12px;
+    flex-direction: row;
+    border-radius: 500px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.icon-button img {
+    width: 30px;
+    height: 30px;
+}
+
+/* User Greeting - Modified */
+.user-greeting {
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 550;
+    font-style: normal;
+    padding: 3%;
+    padding-left: 5%;
+    padding-right: 30%;
+    font-size: 16px;
+}
+
+/* Pickup Status - Modified */
+.pickup-status {
+    padding: 0 16px;
+    margin-top: 16px;
+    color: white;
+}
+
+.status-card {
+    background-color: #228B22;
+    background-color: var(--primary-light);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 550;
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* Points Card - Modified */
+.points-card {
+    padding: 16px;
+    margin: 16px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.points-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+
+.points-display {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+.points-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+}
+
+.points-unit {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.expiry-date {
+    font-size: 12px;
+    color: var(--text-hint);
+    margin-bottom: 12px;
+}
+
+.points-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.history-btn, .redeem-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.history-btn {
+    background-color: #f0f0f0;
+}
+
+.redeem-btn {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+.divider {
+    color: #ccc;
+}
+
+/* Pickup CTA - Modified */
+.pickup-cta {
+    padding: 16px;
+    margin: 16px;
+    background-color: var(--primary-light);
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+}
+
+.cta-text {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.book-now {
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* News Section - Modified */
+.news-update {
+    padding: 0 16px;
+    margin-top: 24px;
+}
+
+.news-update h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.news-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.news-item {
+    background-color: #f9f9f9;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.news-placeholder {
+    color: var(--text-hint);
+}
+/* ===== MODIFIED SECTION ENDS HERE ===== */
+
+/* ===== YOUR ORIGINAL PRIVILEGE SECTION AND BELOW - COMPLETELY UNCHANGED ===== */
+.priviledge-container {
+    width: 100%;
+    margin-top: 24px;
+}
+
+.tulisan-priv {
+    font-size: 18px;
+    color: #347928;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 16px;
+}
+  
+.privilege-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    margin-top: 8px;
+}
+
+.privilege-header p {
+    font-size: 12px;
+    color: #347928;
+    margin: 0;
+}
+  
+.privilege-header a {
+    font-size: 12px;
+    color: #228B22;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.voucher-container, .voucher-container2 {
+    width: 100%;
+    overflow-x: auto;
+    padding: 8px 16px;
+    margin-top: 8px;
+}
+
+.voucher-list, .voucher-list2 {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.kopi-kenangan, .KFC, .McDonalds, .Vapiano {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    min-width: 150px;
+}
+  
+.kopi-kenangan img, .KFC img, .McDonalds img, .Vapiano img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.kopi-kenangan p, .KFC p, .McDonalds p, .Vapiano p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.kopi-kenangan p2, .KFC p2, .McDonalds p2, .Vapiano p2 {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.voucher-list2 {
+    padding: 0 4px;
+}
+
+.MilkLife, .tropicana-minyak, .bango, .gula-pasir, .sania-beras {
+    border: 0px solid;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 16px;
+    margin: 8px;
+    min-width: 120px;
+}
+
+.MilkLife img, .tropicana-minyak img, .bango img, .gula-pasir img, .sania-beras img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+.voucher-list2 p {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.pts {
+    background-color: #347928;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    width: fit-content;
+    margin: 8px auto 0 auto;
+    font-size: 8px;
+}
+
+.voucher-container::-webkit-scrollbar, 
+.voucher-container2::-webkit-scrollbar {
+    display: none;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--surface);
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 100;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 10px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.nav-btn.active {
+    color: var(--primary-color);
+}
+
+.nav-icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.nav-label {
+    font-size: 12px;
+}
