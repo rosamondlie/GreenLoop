@@ -4,6 +4,7 @@ import Home from "@/pages/Home";  // Cleaner absolute path
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Activity from "./pages/Activity";
 import Pickup from "@/pages/Pickup"; // Adjust path if necessary
+import Login from "./pages/Login";  
 
 // Remove this duplicate declaration
 // const Home = () => <h1>Home Page</h1>;
@@ -23,6 +24,7 @@ const App = () => {
                 <Link to="/pickup">Pickup</Link>
             </nav>
             <Routes>
+                <Route path="/login" element={<Login />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/activity" element={<Activity />} />
                 <Route path="/pickup" element={<Pickup />} />
