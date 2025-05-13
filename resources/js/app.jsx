@@ -5,13 +5,13 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Activity from "./pages/Activity";
 import Pickup from "@/pages/Pickup"; 
 import Login from "@/pages/Login"
+import Register from "./pages/Register"
 
 const About = () => <h1>About Page</h1>;
 
 const App = () => { 
     return (
         <Router>
-
             <nav>
                 <Link to="/">Home</Link> |
                 <Link to="/activity">Activity</Link> | 
@@ -24,6 +24,7 @@ const App = () => {
                 <Route path="/activity" element={<Activity />} />
                 <Route path="/pickup" element={<Pickup />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
             </Routes>
         </Router>
     );

@@ -408,6 +408,7 @@ body {
     font-size: 10px;
     cursor: pointer;
     padding: 4px 8px;
+    justify-content: space-between
 }
 
 .nav-btn.active {
