@@ -1,20 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Home from "@/pages/Home";  // Cleaner absolute path
+import Home from "@/pages/Home"; 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Activity from "./pages/Activity";
-import Pickup from "@/pages/Pickup"; // Adjust path if necessary
+import Pickup from "@/pages/Pickup"; 
+import Login from "@/pages/Login"
 
-// Remove this duplicate declaration
-// const Home = () => <h1>Home Page</h1>;
-
-// Remove this duplicate declaration
-// 
 const About = () => <h1>About Page</h1>;
 
-const App = () => {
+const App = () => { 
     return (
         <Router>
+
             <nav>
                 <Link to="/">Home</Link> |
                 <Link to="/activity">Activity</Link> | 
@@ -26,7 +23,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/activity" element={<Activity />} />
                 <Route path="/pickup" element={<Pickup />} />
-
+                <Route path="/login" element={<Login />} />
             </Routes>
         </Router>
     );
