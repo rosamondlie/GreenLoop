@@ -23,14 +23,14 @@ body {
 }
 
 .container {
-display: flex;
-flex-direction: column;
-height: 100vh;
-max-width: 400px; /* Ukuran max seperti iPhone 12 */
-width: 100%;
-margin: 0 auto; /* Tengah di layar */
-background-color: white;
-border: 1px solid #e5e7eb; /* Supaya ada batasan kayak frame handphone */
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    background-color: var(--surface);
+    height: 100vh;
+    position: relative;
+    padding-bottom: 72px;
 }
 
 .header {

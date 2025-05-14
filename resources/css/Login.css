@@ -52,7 +52,9 @@ body {
     width: 100%;
     height: auto;
     background-color: #005005;
+    padding: 2rem;
 }
+
 
 .square{
     max-width:400px;
