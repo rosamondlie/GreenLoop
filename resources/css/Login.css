@@ -37,7 +37,6 @@ body {
     background-color: var(--surface);
     min-height: 100vh;
     position: relative;
-    padding-bottom: 72px;
 }
 
 .header{
@@ -51,7 +50,7 @@ body {
 .login-image{
     width: 100%;
     height: auto;
-    background-color: var(--primary-dark);
+    background-image: linear-gradient(#005005, #2e7d32) ;
 }
 
 .square{
@@ -75,7 +74,7 @@ body {
     color: #ffffff;
     justify-content: center;
     display: flex;
-    padding-top: 15px;
+    padding-top: 8px;
     font-size: 24px;
     font-weight: bold;
 }

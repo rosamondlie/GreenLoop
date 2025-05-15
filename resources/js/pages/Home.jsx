@@ -28,10 +28,10 @@ const Home = () => {
             </section>
 
             <section className="points-card">
-                <h3 className="points-title">Poin balance</h3>
+                <h3 className="points-title">Point balance</h3>
                 <div className="points-display">
                     <span className="points-number">103</span>
-                    <span className="points-unit">poin(s)</span>
+                    <span className="points-unit">point(s)</span>
                 </div>
                 <p className="expiry-date">expired date 13/07/2026</p>
                 <div className="points-actions">
