@@ -61,7 +61,9 @@ const Home = () => {
                 <div className="points-actions">
                     <button className="history-btn">History</button>
                     <span className="divider">|</span>
-                    <button className="redeem-btn">Redeem</button>
+                    <Link to="/Voucher">
+                        <button className="redeem-btn">Redeem</button>
+                    </Link>
                 </div>
             </section>
 
