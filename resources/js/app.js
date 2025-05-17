@@ -7,7 +7,7 @@ import App from './app'; // Your root React component
 import { createRoot } from 'react-dom/client';
 const container = document.getElementById('app');
 const root = createRoot(container);
-root.render(<App />);
+root.render(< App />);
 
 // For React 17 or earlier:
 // ReactDOM.render(<App />, document.getElementById('app'));

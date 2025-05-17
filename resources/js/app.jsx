@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import ReactDOM from "react-dom/client";
 import Home from "@/pages/Home"; 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -6,6 +6,7 @@ import Activity from "./pages/Activity";
 import Pickup from "@/pages/Pickup"; 
 import Login from "@/pages/Login"
 import Register from "./pages/Register"
+import Voucher from "./pages/Voucher"
 
 const About = () => <h1>About Page</h1>;
 
@@ -17,14 +18,16 @@ const App = () => {
                 <Link to="/activity">Activity</Link> | 
                 <Link to="/login">Login</Link> | 
                 <Link to="/register">Register</Link> | 
-                <Link to="/pickup">Pickup</Link>
+                <Link to="/pickup">Pickup</Link> |
+                <Link to="/voucher">Voucher</Link>
             </nav>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/activity" element={<Activity />} />
                 <Route path="/pickup" element={<Pickup />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
+                <Route path="/register" element={<Register />}/>
+                <Route path="/voucher" element={<Voucher />}/>
             </Routes>
         </Router>
     );

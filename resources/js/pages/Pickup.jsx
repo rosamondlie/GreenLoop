@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import '../../css/pickup.css';
 
@@ -17,7 +16,7 @@ export default function PickupPage() {
           <div className="pickup-address-text">
             <p className="pickup-location-title">Pick-up at:</p>
             <p className="pickup-location-detail">
-              <span className="pickup-location-icon"><img src="image/location.png" alt="" /></span>
+              <span className="pickup-location-icon"><img src="images/loc.png" alt="" /></span>
               Jl. Raya Kb. Jeruk No.27, RT.1/RW.9, ...
             </p>
             <p className="pickup-location-desc">beside betamart</p>

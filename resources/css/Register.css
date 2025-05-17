@@ -31,7 +31,7 @@ body {
     justify-content: center;
 }
 
-.container{
+.container-reg{
     max-width: 400px;
     margin: 0 auto;
     background-color: var(--surface);
@@ -42,30 +42,34 @@ body {
 
 .header-welcome {
     background-color: white;
+    background-color: #005005;
     justify-content: center;
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-.container img{
+.container-reg img{
     width: 100%;
     height: auto;
-    background-color: #005005;
+    padding: 2rem;
+    /* background-color: #005005; */
 }
 
-.square{
-    flex-direction: column; 
+.square-reg{
+    /* flex-direction: column;
     align-items: center;
     gap: 8px; 
     margin-top: 20px;
     margin-top: 15px;
-    font-size: 14px;
+    font-size: 14px; */
+    max-width: 400px;
+    position: relative;
 }
 
-.sqr1{
+.sqr1-reg{
     width: 100%;
-    height: 7vh;
+    height: 10vh;
     background-color: #DAEFC1;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
@@ -75,7 +79,7 @@ body {
     z-index: 1;
 }
 
-.sqr1 h2{
+.sqr1-reg h2{
     color: #347928;
     justify-content: center;
     display: flex;
@@ -84,25 +88,25 @@ body {
     font-weight: bold;
 }
 
-.sqr2{
+.sqr2-reg{
     background-color: white;
     width: 100%;
     height: auto;
-    top: 3vh;
+    top: 6vh;
+    position: absolute;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     z-index: 2;
 }
 
-.form-container{
+.form-container-reg{
     width: 100%;
     height: auto;
     position: relative;
     padding: 20px 0;
-
 }
 
-.form-container input {
+.form-container-reg input {
     width: 70%;
     height: 6vh;
     border-radius: 13px;
@@ -151,4 +155,8 @@ body {
 
 .direct-link span{
     color: #2e7d32;
+}
+
+.error{
+    color: red;
 }

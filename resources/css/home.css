@@ -17,6 +17,10 @@
     --spacing-unit: 8px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -80,12 +84,21 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.icon-gr{
+    display: flex;
+    margin-right: 1rem;
 }
 
 .icon-button {
     background: none;
     border: none;
-    padding: 0;
+    display: flex;
+    padding-top: 10px;
+    /* padding: 0; */
 }
 
 .icon-button img {
@@ -95,7 +108,6 @@ body {
 
 /* User Greeting - Modified */
 .user-greeting {
-    margin-top: 10px;
     font-family: "Poppins", sans-serif;
     font-weight: 550;
     font-style: normal;
@@ -326,14 +338,14 @@ body {
     object-fit: cover;
 }
 
-.kopi-kenangan p, .KFC p, .McDonalds p, .Vapiano p {
+.p {
     margin: 0;
     font-size: 14px;
     font-weight: bold;
     text-align: center;
 }
 
-.kopi-kenangan p2, .KFC p2, .McDonalds p2, .Vapiano p2 {
+.p2{
     margin: 0;
     font-size: 14px;
     text-align: center;

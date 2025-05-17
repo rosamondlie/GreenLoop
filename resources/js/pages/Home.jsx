@@ -1,7 +1,27 @@
-import React from "react";
-import "../../css/home.css"; 
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "../../css/home.css";
 
 const Home = () => {
+    const [user, setUser] = useState(null);
+
+    async function getUser() {
+        const token = localStorage.getItem('token');
+        const res = await fetch('/api/user', {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        const data = await res.json();
+        if (res.ok) {
+            setUser(data);
+        }
+    }
+
+    useEffect(() => {
+        getUser();
+    }, []);
+
     return (
         <div className="home-container">
             <header className="header">
@@ -16,9 +36,13 @@ const Home = () => {
             
                 <div className="user-info">
                     <div className="user-greeting">
-                        <p>Hi! Rayya Al Ghazali</p></div>
-                    <button className="icon-button"><img src="images/notif.png" alt="Notifications" /></button>
-                    <button className="icon-button"><img src="images/profile.png" alt="Profile" /></button> 
+                        <p>Hi! {user?.username || 'Have a nice day!'}</p></div>
+                    <div className="icon-gr">
+                        <Link to="/Activity">
+                            <button className="icon-button"><img src="images/notif.png" alt="Notifications" /></button>
+                        </Link>
+                        <button className="icon-button"><img src="images/profile.png" alt="Profile" /></button> 
+                    </div>
                 </div>
 
             <section className="pickup-status">
@@ -45,7 +69,9 @@ const Home = () => {
             <img src="/images/gambargojek.png" alt="" />
             <div className="cta-right">
                 <p className="cta-text">Let us take care of your waste — schedule a pickup today!</p>
-                <button className="book-now">Book now</button>
+                <Link to="/Pickup">
+                    <button className="book-now">Book now</button>
+                </Link>
             </div>
             </section>
 
@@ -75,26 +101,26 @@ const Home = () => {
                 <div className="voucher-list">
                     <div className="kopi-kenangan">
                         <img src="/images/kopi-kenangan.jpg" alt="" />
-                        <p>Kopi Kenangan</p>
-                        <p2>Free Coffee</p2>
+                        <p className="p">Kopi Kenangan</p>
+                        <p className="p2">Free Coffee</p>
                     </div>
 
                     <div className="KFC">
                         <img src="/images/KFC.png" alt="" />
-                        <p>KFC</p>
-                        <p2>25% OFF</p2>
+                        <p className="p">KFC</p>
+                        <p className="p2">25% OFF</p>
                     </div>
 
                     <div className="McDonalds">
                         <img src="/images/McDonalds.png" alt="" />
-                        <p>McDonalds</p>
-                        <p2>25% OFF</p2>
+                        <p className="p">McDonalds</p>
+                        <p className="p2">25% OFF</p>
                     </div>
 
                     <div className="Vapiano">
                         <img src="/images/Vapiano.jpg" alt="" />
-                        <p>Vapiano</p>
-                        <p2>50% OFF</p2>
+                        <p className="p">Vapiano</p>
+                        <p className="p2">50% OFF</p>
                     </div>
                 </div>
             </section>
