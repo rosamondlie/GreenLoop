@@ -85,9 +85,7 @@ export default function Activity() {
             </div>
             
             <div className="scheduled-card">
-              <div className="checkmark">
               <img src="/images/activity-img/checkmark.png" alt="" />
-              </div>
               <div className="act-card-content">
                 <div className="scheduled-text">
                   27 Feb 2025, 15:21

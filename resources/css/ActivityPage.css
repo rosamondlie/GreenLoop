@@ -78,7 +78,7 @@ border: 1px solid #e5e7eb; /* Supaya ada batasan kayak frame handphone */
 .tab-button.active {
   background-color: var(--dark-green);
   color: var(--milky-white);
-  border-style: none;
+  border-style: solid;
 }
 
 #Ongoing{
