@@ -36,7 +36,7 @@ body {
     background-color: var(--surface);
     min-height: 100vh;
     position: relative;
-    padding-bottom: 72px;
+    padding-bottom: 120px;
 }
 
 /* ===== MODIFIED SECTION (HEADER TO NEWS) STARTS HERE ===== */
@@ -80,17 +80,40 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
+    padding-right: 15px;
 }
 
-.icon-button {
-    background: none;
+
+.icon-button1,
+.icon-button2 {
+    width: 32px;
+    height: 32px;
+    background-color: var(--surface);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
-    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: var(--shadow-sm); 
 }
 
-.icon-button img {
-    width: 30px;
-    height: 30px;
+.icon-button1:hover,
+.icon-button2:hover {
+    background-color: #d6d6d6;
+}
+
+.icon-button1 img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.icon-button2 img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
 }
 
 /* User Greeting - Modified */
@@ -133,10 +156,18 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.points-card img{
+    width: 28%;
+    height: auto;
+    float: right;
+    padding-top: 10px;
+    transform: translateX(-20px);
+}
+
 .points-title {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 8px;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .points-display {
@@ -147,7 +178,7 @@ body {
 }
 
 .points-number {
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
     color: black;
 }
@@ -219,7 +250,7 @@ body {
 }
 
 .book-now {
-    background-color: #347928;
+    background-color: var(--primary-color);
     border: none;
     padding: 8px 16px;
     border-radius: 50px;
@@ -228,159 +259,150 @@ body {
 }
 
 /* News Section - Modified */
-.news-update {
-    padding: 0 16px;
-    margin-top: 24px;
+
+.news-update h3{
+    padding-left: 15px;
+    padding-bottom: 10px;
 }
 
-.news-update h3 {
-    font-size: 16px;
-    margin-bottom: 8px;
+.news-subtitle{
+    padding-left: 15px;
+    padding-bottom: 10px;
 }
 
-.news-subtitle {
-    font-size: 14px;
-    color: var(--text-secondary);
-    margin-bottom: 12px;
+.news-card{
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    border-radius: 15px;
+    background-color: var(--surface);
+    border: 1.5px #2e7d32 solid;
+    padding: 10px;
+    height: 34vh;
 }
 
-.news-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+.news-card img{
+    max-width: 100%;
+    width: 200px;
+    height: auto;
 }
 
-.news-item {
-    background-color: #f9f9f9;
-    padding: 16px;
-    border-radius: 8px;
-    text-align: center;
+.news-date{
+    font-size: 8px;
+    font-weight: light;
+    padding-top: 10px;
 }
 
-.news-placeholder {
-    color: var(--text-hint);
+.news-headline{
+    font-size: 12px;
+    font-weight: bold;
+    max-width: 100%;
+    padding-bottom: 10px
+}
+
+.view-link{
+    display: flex;
+    position: relative;
+    background-color: var(--primary-light);
+    width: 75px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.link-button{
+    font-size: 10px;
+    text-decoration: none;
+    color: var(--surface);
+    font-weight: bold;
 }
 /* ===== MODIFIED SECTION ENDS HERE ===== */
 
 /* ===== YOUR ORIGINAL PRIVILEGE SECTION AND BELOW - COMPLETELY UNCHANGED ===== */
-.priviledge-container {
-    width: 100%;
-    margin-top: 24px;
+
+.privilege {
+    padding-top: 15px;
+    margin-bottom: 20px;
 }
 
-.tulisan-priv {
-    font-size: 18px;
-    color: #347928;
-    font-weight: bold;
-    margin: 0;
-    padding: 0 16px;
-}
-  
-.privilege-header {
+.priv-header{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+}
+
+.privilege-title{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.see-all{
+    background-color: var(--primary-color);
+    width: 70px;      
+    height: 25px;
+    margin-left: auto;
+    margin-right: 15px;
+    margin-top: 15px;
+    border-radius: 20px;
+    display: flex;               
+    justify-content: center;     
+    align-items: center;        
+    cursor: pointer;
+}
+
+.link{
+    font-size: 12px;
+    color: white;          
+    text-decoration: none;   
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 0 16px;
-    margin-top: 8px;
-}
-
-.privilege-header p {
-    font-size: 12px;
-    color: #347928;
-    margin: 0;
-}
-  
-.privilege-header a {
-    font-size: 12px;
-    color: #228B22;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.voucher-container, .voucher-container2 {
     width: 100%;
-    overflow-x: auto;
-    padding: 8px 16px;
-    margin-top: 8px;
+    height: 100%;
+    border-radius: 20px;
 }
 
-.voucher-list, .voucher-list2 {
+.privilege-container {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 10px;
+    overflow-x: auto;
+    padding-left: 15px;
+    padding-top: 15px;
+    scroll-padding-left: 15px;
+    padding-bottom: 6px;
 }
 
-.kopi-kenangan, .KFC, .McDonalds, .Vapiano {
+.privilege-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.privilege-card {
+    flex: 0 0 auto;
+    width: 140px;
+    height: 140px;
+    background-color: var(--surface);
+    box-shadow: var(--shadow-md);
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    min-width: 150px;
-}
-  
-.kopi-kenangan img, .KFC img, .McDonalds img, .Vapiano img {
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    margin-bottom: 10px;
-    object-fit: cover;
-}
-
-.kopi-kenangan p, .KFC p, .McDonalds p, .Vapiano p {
-    margin: 0;
-    font-size: 14px;
-    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
     text-align: center;
+    margin-right: 15px;
 }
 
-.kopi-kenangan p2, .KFC p2, .McDonalds p2, .Vapiano p2 {
-    margin: 0;
-    font-size: 14px;
-    text-align: center;
-}
-
-.voucher-list2 {
-    padding: 0 4px;
-}
-
-.MilkLife, .tropicana-minyak, .bango, .gula-pasir, .sania-beras {
-    border: 0px solid;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    padding: 16px;
-    margin: 8px;
-    min-width: 120px;
-}
-
-.MilkLife img, .tropicana-minyak img, .bango img, .gula-pasir img, .sania-beras img {
-    width: 100px;
-    height: 100px;
+.privilege-card img {
+    width: 50%;
+    height: auto;
     object-fit: contain;
-    margin: 0 auto;
-    display: block;
+    margin-bottom: 10px;
 }
 
-.voucher-list2 p {
-    font-size: 12px;
-    text-align: center;
-    margin-top: 8px;
-}
-
-.pts {
-    background-color: #347928;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 15px;
-    text-align: center;
+.privilege-desc {
+    font-size: 14px;
     font-weight: bold;
-    width: fit-content;
-    margin: 8px auto 0 auto;
-    font-size: 8px;
-}
-
-.voucher-container::-webkit-scrollbar, 
-.voucher-container2::-webkit-scrollbar {
-    display: none;
 }
 
 .bottom-nav {

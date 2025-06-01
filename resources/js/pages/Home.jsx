@@ -1,5 +1,6 @@
 import React from "react";
-import "../../css/home.css"; 
+import "../../css/home.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -17,17 +18,18 @@ const Home = () => {
                 <div className="user-info">
                     <div className="user-greeting">
                         <p>Hi! Rayya Al Ghazali</p></div>
-                    <button className="icon-button"><img src="images/notif.png" alt="Notifications" /></button>
-                    <button className="icon-button"><img src="images/profile.png" alt="Profile" /></button> 
+                    <button className="icon-button1"><img src="images/notif.png" alt="Notifications" /></button>
+                    <button className="icon-button2"><img src="images/user.png" alt="Profile" /></button> 
                 </div>
 
             <section className="pickup-status">
                 <div className="status-card">
-                    <p>No Scheduled Pick Up Today! <img src="images/trash.png" alt="" /></p>
+                    <p>No Scheduled Pick Up Today! <img src="images/trash.png" alt="trash-img" /></p>
                 </div>
             </section>
 
             <section className="points-card">
+                <img src="/images/coin.png" alt="coins" />
                 <h3 className="points-title">Poin balance</h3>
                 <div className="points-display">
                     <span className="points-number">103</span>
@@ -35,9 +37,6 @@ const Home = () => {
                 </div>
                 <p className="expiry-date">expired date 13/07/2026</p>
                 <div className="points-actions">
-                    <button className="history-btn">History</button>
-                    <span className="divider">|</span>
-                    <button className="redeem-btn">Redeem</button>
                 </div>
             </section>
 
@@ -53,88 +52,78 @@ const Home = () => {
             <section className="news-update">
                 <h3>News Update</h3>
                 <p className="news-subtitle">What's Happening in Waste Management Today?</p>
-                <div className="news-grid">
-                    <div className="news-item">
-                        <div className="news-placeholder">☐ News</div>
+
+                <div className="news">
+                    <div className="news-card">
+                        <img src="/images/pandawara-group.jpg" alt="news-img" />
+                        <div className="news-body">
+                            <p className="news-date">29th January 2025</p>
+                            <h2 className="news-headline">Pandawara Group Cleans Up Trash in the Citarum River</h2>
+                            <div className="view-link">
+                                <a href="https://www.liputan6.com/lifestyle/read/5899442/pandawara-group-bersihkan-sampah-di-sungai-citarum-selama-7-hari-habiskan-dana-rp106-juta" className="link-button">Read more</a>
+                            </div>
+                        </div>
                     </div>
-                    <div className="news-item">
-                        <div className="news-placeholder">☐ News</div>
+
+                    <div className="news-card">
+                        <img src="/images/waste-management.jpg" alt="news-img" />
+                        <div className="news-body">
+                            <p className="news-date">18th May 2025</p>
+                            <h2 className="news-headline">New plan for bins and recycling to be considered</h2>
+                            <div className="view-link">
+                                <a href="https://www.bbc.com/news/articles/clyg1lxmv2eo" className="link-button">Read more</a>
+                            </div>
+                        </div>
                     </div>
+
+                    <div className="news-card">
+                        <img src="/images/plastic.png" alt="news-img" />
+                        <div className="news-body">
+                            <p className="news-date">3rd July 2025</p>
+                            <h2 className="news-headline">10 Ways to Reduce Plastic Pollution</h2>
+                            <div className="view-link">
+                                <a href="https://www.nrdc.org/stories/10-ways-reduce-plastic-pollution" className="link-button">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="navbar"></div>
                 </div>
+
             </section>
 
-            <section className="priviledge-container">
-                <h2 className="tulisan-priv">Privilege</h2>
-                <div className="privilege-header">
-                    <p>Redeem now. Enjoy the treats-!</p>
-                    <a href="#">See all</a>
-                </div>
-            </section>
-
-            <section className="voucher-container">
-                <div className="voucher-list">
-                    <div className="kopi-kenangan">
-                        <img src="/images/kopi-kenangan.jpg" alt="" />
-                        <p>Kopi Kenangan</p>
-                        <p2>Free Coffee</p2>
-                    </div>
-
-                    <div className="KFC">
-                        <img src="/images/KFC.png" alt="" />
-                        <p>KFC</p>
-                        <p2>25% OFF</p2>
-                    </div>
-
-                    <div className="McDonalds">
-                        <img src="/images/McDonalds.png" alt="" />
-                        <p>McDonalds</p>
-                        <p2>25% OFF</p2>
-                    </div>
-
-                    <div className="Vapiano">
-                        <img src="/images/Vapiano.jpg" alt="" />
-                        <p>Vapiano</p>
-                        <p2>50% OFF</p2>
+            <section className="privilege">
+                <div className="priv-header">
+                    <h2 className="privilege-title">Privilege</h2>
+                    <div className="see-all">
+                        <Link to="/voucher" className="link">See all</Link>
                     </div>
                 </div>
-            </section>
-
-            <section className="voucher-container2">
-                <div className="voucher-list2">
-                    <div className="MilkLife">
-                        <img src="/images/MilkLife.png" alt="" />
-                        <p>Milk Life Susu UHT 1L</p>
-                        <div className="pts">20 points</div>
+                <div className="privilege-container">
+                    <div className="privilege-card">
+                        <img src="/images/logoKFC.png" alt="kfc"/>
+                        <p className="privilege-desc">Get 25% off</p>
                     </div>
 
-                    <div className="tropicana-minyak">
-                        <img src="/images/TropicanaMinyak.png" alt="" />
-                        <p>Tropicana Slim Minyak Goreng 946 ml</p>
-                        <div className="pts">100 points</div>
+                    <div className="privilege-card">
+                        <img src="/images/logoMCD.png" alt="mcd"/>
+                        <p className="privilege-desc">Get 25% off</p>
                     </div>
 
-                    <div className="bango">
-                        <img src="/images/bango.png" alt="" />
-                        <p>Bango Kecap Manis 520 ml</p>
-                        <div className="pts">50 points</div>
+                    <div className="privilege-card">
+                        <img src="/images/logoVap.png" alt="kfc"/>
+                        <p className="privilege-desc">Get 25% off</p>
                     </div>
 
-                    <div className="gula-pasir">
-                        <img src="/images/gula.png" alt="" />
-                        <p>Gulaku Gula Pasir Premium 1kg</p>
-                        <div className="pts">80 points</div>
-                    </div>
-
-                    <div className="sania-beras">
-                        <img src="/images/beras.png" alt="" />
-                        <p>Sania Beras Premium 2.5kg</p> 
-                        <div className="pts">120 points</div>
+                    <div className="privilege-card">
+                        <img src="/images/logokopken.png" alt="kfc"/>
+                        <p className="privilege-desc">Get 25% off</p>
                     </div>
                 </div>
             </section>
 
             <nav className="bottom-nav">
-                <button className="nav-btn active">
+                <button className="nav-btn">
                     <span className="nav-icon"><img src="images/list.png" alt="" /></span>
                     <span className="nav-label">Activity</span>
                 </button>
