@@ -1,0 +1,368 @@
+/* home.css - BASED ON YOUR PROVIDED VERSION, WITH CARD/SHADOWS REMOVED FROM NEWS & VOUCHERS */
+:root {
+    --primary-color: #2e7d32;
+    --primary-light: #60ad5e;
+    --primary-dark: #005005;
+    --secondary-color: #ffc107;
+    --background: #f5f5f5;
+    --surface: #ffffff;
+    --error: #d32f2f;
+    --text-primary: rgba(0, 0, 0, 0.87);
+    --text-secondary: rgba(0, 0, 0, 0.6);
+    --text-hint: rgba(0, 0, 0, 0.38);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-lg: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+    --border-radius: 12px; 
+    --spacing-unit: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-primary);
+}
+
+.home-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: var(--surface);
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 72px;
+}
+
+/* ===== YOUR EXISTING STYLES (FROM HEADER TO PICKUP CTA) - UNCHANGED ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #347928;
+    color: white;
+}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { width: 40px; height: 40px; }
+.logo-text h3 { margin: 0; font-size: 18px; }
+.tagline { margin: 0; font-size: 12px; opacity: 0.8; }
+.user-info { display: flex; gap: 12px; flex-direction: row; border-radius: 500px; font-family: "Poppins", sans-serif; font-weight: 100; font-style: normal; justify-content: space-between; margin-top: 10px; }
+.icon-gr{ display: flex; margin-right: 1rem; }
+.icon-button { background: none; border: none; }
+.icon-button img { width: 30px; height: 30px; }
+.user-greeting { font-family: "Poppins", sans-serif; font-weight: 550; font-style: normal; padding: 3%; padding-left: 5%; padding-right: 30%; font-size: 16px; }
+.pickup-status { padding: 0 16px; margin-top: 16px; color: white; }
+.status-card { background-color: #228B22; padding: 12px; border-radius: 8px; text-align: center; font-family: "Poppins", sans-serif; font-weight: 550; font-size: 20px; font-style: italic; }
+.points-card { padding: 16px; margin: 16px; background-color: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.points-title { font-size: 16px; margin-bottom: 8px; font-weight: normal; }
+.points-display { display: flex; align-items: baseline; gap: 4px; margin-bottom: 4px; }
+.points-number { font-size: 28px; font-weight: bold; color: black; }
+.points-unit { font-size: 14px; color: var(--text-secondary); }
+.expiry-date { font-size: 12px; color: var(--text-hint); margin-bottom: 12px; }
+.points-actions { display: flex; align-items: center; gap: 8px; }
+.history-btn, .redeem-btn { padding: 8px 12px; border: none; border-radius: 4px; font-size: 14px; }
+.history-btn { background-color: #f0f0f0; }
+.redeem-btn { background-color: var(--secondary-color); color: black; }
+.divider { color: #ccc; }
+.pickup-cta { padding: 16px; margin: 16px; align-items: center; display: flex; gap: 20px; }
+.pickup-cta img { width: 110px; height: 115px; }
+.cta-right { display: flex; flex-direction: column; align-items: flex-end; }
+.cta-text { font-size: 18px; font-weight: bold; color: #347928; text-align: right; margin-bottom: 12px; }
+.book-now { background-color: #347928; border: none; padding: 8px 16px; border-radius: 50px; font-weight: bold; color: white; }
+
+
+/* ===== NEWS SECTION - MODIFIED TO REMOVE CARD STYLING ===== */
+.news-update {
+    padding: 16px; /* Keep padding for section spacing */
+    margin: 16px 0; /* Use margin for separation, removed side margin as items are not carded */
+    /* background-color: var(--surface); REMOVED */
+    /* border-radius: 8px; REMOVED */
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); REMOVED */
+}
+
+.news-update h3 {
+    font-size: 1.2em; 
+    margin-bottom: 4px; 
+    color: var(--text-primary);
+}
+
+.news-subtitle {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.news-grid { /* Retaining horizontal scroll for news */
+    display: flex; 
+    overflow-x: auto; 
+    flex-wrap: nowrap; 
+    gap: 16px;
+    padding-bottom: 16px; 
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+.news-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.news-item {
+    /* background-color: #f9f9f9; REMOVED */
+    padding: 0 0 10px 0; /* Reduced padding, mainly for bottom spacing */
+    /* border-radius: 8px; REMOVED */
+    /* box-shadow: var(--shadow-sm); REMOVED */
+    border-bottom: 1px solid #eee; /* ADDED subtle separator */
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    text-align: left;
+    width: 280px; 
+    flex-shrink: 0; 
+    margin-right: 16px; 
+}
+.news-item:last-child {
+    margin-right: 0;
+    border-bottom: none; /* Remove border from last item in scroll */
+}
+
+
+.news-item img { 
+    width: 100%;
+    height: 120px; 
+    object-fit: cover; 
+    border-radius: 4px; 
+    margin-bottom: 10px;
+}
+
+.news-item h4 { 
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 0;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.news-item p { 
+    font-size: 0.85em;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin-bottom: 12px;
+    flex-grow: 1; 
+}
+
+/* General Button Styles (Kept from previous enhancement for "Read more") */
+.btn {
+    padding: 8px 12px; 
+    border: none;
+    border-radius: 4px; 
+    font-size: 14px; 
+    font-weight: 500; 
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--primary-color); 
+    color: white;
+}
+.btn-primary:hover {
+    background-color: var(--primary-dark); 
+    opacity: 0.9;
+}
+
+.news-item .read-more-btn {
+    margin-top: auto; 
+    align-self: flex-start; 
+}
+/* ===== END OF NEWS SECTION MODIFICATIONS ===== */
+
+
+/* ===== PRIVILEGE SECTION & VOUCHERS - MODIFIED TO REMOVE CARD STYLING ===== */
+.priviledge-container { /* Keep section structure */
+    width: 100%;
+    margin-top: 24px;
+    padding: 0 16px; /* Added padding here if not present */
+}
+
+.tulisan-priv { /* Keep title styling */
+    font-size: 18px;
+    color: #347928;
+    font-weight: bold;
+    margin: 0 0 8px 0; /* Added bottom margin */
+}
+  
+.privilege-header { /* Keep header styling */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 16px; Now handled by .priviledge-container */
+    margin-top: 8px;
+    margin-bottom: 12px; /* Added bottom margin */
+}
+
+.privilege-header p {
+    font-size: 12px;
+    color: #347928;
+    margin: 0;
+}
+  
+.privilege-header a {
+    font-size: 12px;
+    color: #228B22;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Voucher Containers - Retain scroll, remove item card styles */
+.voucher-container, .voucher-container2 {
+    width: 100%;
+    overflow-x: auto;
+    padding-top: 8px; 
+    padding-bottom: 8px;
+    margin-top: 8px;
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; 
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+.voucher-container::-webkit-scrollbar, 
+.voucher-container2::-webkit-scrollbar {
+    display: none;
+}
+
+.voucher-list, .voucher-list2 {
+    display: flex;
+    flex-wrap: nowrap; 
+    gap: 10px; 
+    padding-left: 16px; 
+    padding-right: 16px; 
+}
+
+/* Individual Voucher Items - REMOVE SHADOWS, ensure no distinct background */
+.kopi-kenangan, .KFC, .McDonalds, .Vapiano {
+    display: flex;
+    flex-direction: column;
+    padding: 10px; 
+    min-width: 150px; 
+    scroll-snap-align: start; 
+    flex-shrink: 0;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); REMOVED */
+    border-radius: 10px; /* Keep radius for images if desired, or remove if items should be borderless */
+    /* background-color: var(--surface); If they had one, remove it or ensure it matches page */
+    border: 1px solid #f0f0f0; /* OPTIONAL: Add a very light border for separation */
+}
+  
+.kopi-kenangan img, .KFC img, .McDonalds img, .Vapiano img {
+    width: 100%; /* Adjust if needed, was 150px */
+    height: 120px; /* Adjust if needed, was 150px */
+    border-radius: 8px; /* Was 10px, match border-radius if item has one */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); REMOVED (from your original) */
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.MilkLife, .tropicana-minyak, .bango, .gula-pasir, .sania-beras {
+    /* border: 0px solid; REMOVED border from original as it was 0px */
+    border-radius: 10px; /* Maintained */
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); REMOVED */
+    padding: 16px; 
+    margin: 0; /* Using gap in .voucher-list2 */
+    min-width: 120px; 
+    scroll-snap-align: start; 
+    flex-shrink: 0;
+    display: flex; /* Added for consistency */
+    flex-direction: column; /* Added for consistency */
+    text-align: center; /* Added for consistency */
+    border: 1px solid #f0f0f0; /* OPTIONAL: Add a very light border for separation */
+}
+
+.p { /* Your existing styles */
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.p2{ /* Your existing styles */
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.MilkLife img, .tropicana-minyak img, .bango img, .gula-pasir img, .sania-beras img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto 10px auto; /* Added bottom margin */
+    display: block;
+}
+
+.voucher-list2 p {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.pts {
+    background-color: #347928;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    width: fit-content;
+    margin: 8px auto 0 auto;
+    font-size: 8px;
+}
+/* ===== END OF VOUCHER STYLING MODIFICATIONS ===== */
+
+
+/* ===== BOTTOM NAVIGATION - UNCHANGED ===== */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--surface);
+    display: flex;
+    justify-content: space-around;
+    padding: 4px 2px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 100;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 10px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.nav-btn.active {
+    color: var(--primary-color);
+}
+
+.nav-icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.nav-label {
+    font-size: 12px;
+}

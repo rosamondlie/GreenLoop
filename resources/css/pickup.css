@@ -1,0 +1,198 @@
+/* pickup.css */
+
+.pickup-page {
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.pickup-section:nth-of-type(2) {
+  margin-bottom: 1rem;
+}
+
+.pickup-header {
+  position: relative;
+  width: 100%;
+  height: 135px;
+}
+
+.pickup-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.pickup-address-box {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  margin: 0 1rem;
+  margin-top: 90px;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Force space below address card so it doesn't overlap content */
+.pickup-header::after {
+  content: "";
+  display: block;
+  height: 50px;
+}
+
+.pickup-location-title {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.pickup-location-detail {
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.pickup-location-icon {
+  margin-right: 4px;
+}
+
+.pickup-location-desc {
+  font-size: 0.75rem;
+  color: gray;
+}
+
+.pickup-chevron {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: gray;
+}
+
+.pickup-section {
+  margin: 2.4rem 1.5rem;
+}
+
+.pickup-section h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.pickup-datetime-wrapper {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap; /* reduce space between datetime and next section */
+  margin-bottom: -20px;
+}
+
+.pickup-datetime-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pickup-date-input,
+.pickup-time-input {
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.pickup-checkbox label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.green-text {
+  color: #347928;
+  font-weight: 600;
+}
+
+.pickup-example {
+  color: gray;
+  font-size: 0.75rem;
+}
+
+.pickup-weight-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.pickup-weight-btn {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #347928;
+  color: #347928;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.pickup-weight-btn.selected {
+  background-color: #C0EBA6;
+}
+
+.pickup-banner {
+  background-color: #F1F5F9;
+  border-radius: 12px;
+  margin: 2rem 1rem 1rem 1rem;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.pickup-banner img {
+  width: 48px;
+  height: 48px;
+}
+
+.pickup-banner-text {
+  font-size: 0.75rem;
+  color: #000;
+}
+
+.pickup-banner-text strong {
+  color: #347928;
+  display: block;
+}
+
+.pickup-button-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.pickup-schedule-btn {
+  background-color: #C0EBA6;
+  color: #347928;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.error-text {
+  color: red;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
