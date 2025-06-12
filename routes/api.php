@@ -20,7 +20,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanc
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', function (Request $request) { // Standard Sanctum route to get user
         return $request->user();
-    });
+});
 
     Route::get('/pickups', [PickupController::class, 'index']);
     Route::post('/pickups', [PickupController::class, 'store']);

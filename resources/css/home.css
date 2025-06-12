@@ -37,6 +37,7 @@ body {
     min-height: 100vh;
     position: relative;
     padding-bottom: 72px;
+    /* height: 132vh; */
 }
 
 /* ===== YOUR EXISTING STYLES (FROM HEADER TO PICKUP CTA) - UNCHANGED ===== */
@@ -53,12 +54,12 @@ body {
 .logo-text h3 { margin: 0; font-size: 18px; }
 .tagline { margin: 0; font-size: 12px; opacity: 0.8; }
 .user-info { display: flex; gap: 12px; flex-direction: row; border-radius: 500px; font-family: "Poppins", sans-serif; font-weight: 100; font-style: normal; justify-content: space-between; margin-top: 10px; }
-.icon-gr{ display: flex; margin-right: 1rem; }
+.icon-gr{ display: flex; margin-right: 1rem; align-items: center;}
 .icon-button { background: none; border: none; }
 .icon-button img { width: 30px; height: 30px; }
 .user-greeting { font-family: "Poppins", sans-serif; font-weight: 550; font-style: normal; padding: 3%; padding-left: 5%; padding-right: 30%; font-size: 16px; }
 .pickup-status { padding: 0 16px; margin-top: 16px; color: white; }
-.status-card { background-color: #228B22; padding: 12px; border-radius: 8px; text-align: center; font-family: "Poppins", sans-serif; font-weight: 550; font-size: 20px; font-style: italic; }
+.status-card button{ background-color: #228B22; color: white ;padding: 12px; border-radius: 8px; text-align: center; font-family: "Poppins", sans-serif; font-weight: 550; font-size: 20px; font-style: italic; margin: 0 auto; width: 100%; border: none; }
 .points-card { padding: 16px; margin: 16px; background-color: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
 .points-title { font-size: 16px; margin-bottom: 8px; font-weight: normal; }
 .points-display { display: flex; align-items: baseline; gap: 4px; margin-bottom: 4px; }
@@ -87,73 +88,82 @@ body {
 }
 
 .news-update h3 {
-    font-size: 1.2em; 
-    margin-bottom: 4px; 
-    color: var(--text-primary);
+  padding-left: 15px;
+  padding-bottom: 10px;
 }
 
 .news-subtitle {
-    font-size: 0.9em;
-    color: var(--text-secondary);
-    margin-bottom: 16px;
+  padding-left: 15px;
+  padding-bottom: 10px;
 }
 
-.news-grid { /* Retaining horizontal scroll for news */
-    display: flex; 
-    overflow-x: auto; 
-    flex-wrap: nowrap; 
-    gap: 16px;
-    padding-bottom: 16px; 
-    -ms-overflow-style: none;
-    scrollbar-width: none; 
-}
-.news-grid::-webkit-scrollbar {
-    display: none;
+.news {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 0 15px 15px 15px;
+  margin-left: 15px;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.news-item {
-    /* background-color: #f9f9f9; REMOVED */
-    padding: 0 0 10px 0; /* Reduced padding, mainly for bottom spacing */
-    /* border-radius: 8px; REMOVED */
-    /* box-shadow: var(--shadow-sm); REMOVED */
-    border-bottom: 1px solid #eee; /* ADDED subtle separator */
+.news::-webkit-scrollbar {
+  display: none;
+}
+
+.news-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  border-radius: 15px;
+  background-color: var(--surface);
+  border: 1.5px #2e7d32 solid;
+  padding: 10px;
+  width: 30px;
+  /* height: 30vh; */
+}
+
+.news-card img {
+  max-width: 100%;
+  width: 200px;
+  height: auto;
+}
+
+.news-date {
+  font-size: 8px;
+  font-weight: light;
+  padding-top: 10px;
+}
+
+.news-headline {
+  font-size: 12px;
+  font-weight: bold;
+  max-width: 100%;
+  padding-bottom: 10px;
+}
+
+.view-link{
     display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
-    text-align: left;
-    width: 280px; 
-    flex-shrink: 0; 
-    margin-right: 16px; 
-}
-.news-item:last-child {
-    margin-right: 0;
-    border-bottom: none; /* Remove border from last item in scroll */
+    position: relative;
+    background-color: var(--primary-light);
+    width: 75px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 15px;
 }
 
-
-.news-item img { 
-    width: 100%;
-    height: 120px; 
-    object-fit: cover; 
-    border-radius: 4px; 
-    margin-bottom: 10px;
-}
-
-.news-item h4 { 
-    font-size: 1em;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-top: 0;
-    margin-bottom: 6px;
-    line-height: 1.3;
-}
-
-.news-item p { 
-    font-size: 0.85em;
-    color: var(--text-secondary);
-    line-height: 1.4;
-    margin-bottom: 12px;
-    flex-grow: 1; 
+.link-button{
+    font-size: 10px;
+    text-decoration: none;
+    color: var(--surface);
+    font-weight: bold;
+    border-radius: 20px;
 }
 
 /* General Button Styles (Kept from previous enhancement for "Read more") */
@@ -187,144 +197,90 @@ body {
 
 
 /* ===== PRIVILEGE SECTION & VOUCHERS - MODIFIED TO REMOVE CARD STYLING ===== */
-.priviledge-container { /* Keep section structure */
-    width: 100%;
-    margin-top: 24px;
-    padding: 0 16px; /* Added padding here if not present */
+.privilege {
+    padding-top: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 3rem;
 }
 
-.tulisan-priv { /* Keep title styling */
-    font-size: 18px;
-    color: #347928;
-    font-weight: bold;
-    margin: 0 0 8px 0; /* Added bottom margin */
-}
-  
-.privilege-header { /* Keep header styling */
+.priv-header{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+}
+
+.privilege-title{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.see-all{
+    background-color: var(--primary-color);
+    width: 70px;      
+    height: 25px;
+    margin-left: auto;
+    margin-right: 15px;
+    margin-top: 15px;
+    border-radius: 20px;
+    display: flex;               
+    justify-content: center;     
+    align-items: center;        
+    cursor: pointer;
+}
+
+.link{
+    font-size: 12px;
+    color: white;          
+    text-decoration: none;   
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    /* padding: 0 16px; Now handled by .priviledge-container */
-    margin-top: 8px;
-    margin-bottom: 12px; /* Added bottom margin */
-}
-
-.privilege-header p {
-    font-size: 12px;
-    color: #347928;
-    margin: 0;
-}
-  
-.privilege-header a {
-    font-size: 12px;
-    color: #228B22;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-/* Voucher Containers - Retain scroll, remove item card styles */
-.voucher-container, .voucher-container2 {
     width: 100%;
-    overflow-x: auto;
-    padding-top: 8px; 
-    padding-bottom: 8px;
-    margin-top: 8px;
-    scroll-snap-type: x mandatory; 
-    -webkit-overflow-scrolling: touch; 
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
-}
-.voucher-container::-webkit-scrollbar, 
-.voucher-container2::-webkit-scrollbar {
-    display: none;
+    height: 100%;
+    border-radius: 20px;
 }
 
-.voucher-list, .voucher-list2 {
+.privilege-container {
     display: flex;
-    flex-wrap: nowrap; 
-    gap: 10px; 
-    padding-left: 16px; 
-    padding-right: 16px; 
+    overflow-x: auto;
+    padding-left: 15px;
+    padding-top: 15px;
+    scroll-padding-left: 15px;
+    padding-bottom: 6px;
 }
 
-/* Individual Voucher Items - REMOVE SHADOWS, ensure no distinct background */
-.kopi-kenangan, .KFC, .McDonalds, .Vapiano {
+.privilege-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.privilege-card {
+    flex: 0 0 auto;
+    width: 140px;
+    height: 140px;
+    background-color: var(--surface);
+    box-shadow: var(--shadow-md);
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    padding: 10px; 
-    min-width: 150px; 
-    scroll-snap-align: start; 
-    flex-shrink: 0;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); REMOVED */
-    border-radius: 10px; /* Keep radius for images if desired, or remove if items should be borderless */
-    /* background-color: var(--surface); If they had one, remove it or ensure it matches page */
-    border: 1px solid #f0f0f0; /* OPTIONAL: Add a very light border for separation */
-}
-  
-.kopi-kenangan img, .KFC img, .McDonalds img, .Vapiano img {
-    width: 100%; /* Adjust if needed, was 150px */
-    height: 120px; /* Adjust if needed, was 150px */
-    border-radius: 8px; /* Was 10px, match border-radius if item has one */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); REMOVED (from your original) */
-    margin-bottom: 10px;
-    object-fit: cover;
-}
-
-.MilkLife, .tropicana-minyak, .bango, .gula-pasir, .sania-beras {
-    /* border: 0px solid; REMOVED border from original as it was 0px */
-    border-radius: 10px; /* Maintained */
-    /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); REMOVED */
-    padding: 16px; 
-    margin: 0; /* Using gap in .voucher-list2 */
-    min-width: 120px; 
-    scroll-snap-align: start; 
-    flex-shrink: 0;
-    display: flex; /* Added for consistency */
-    flex-direction: column; /* Added for consistency */
-    text-align: center; /* Added for consistency */
-    border: 1px solid #f0f0f0; /* OPTIONAL: Add a very light border for separation */
-}
-
-.p { /* Your existing styles */
-    margin: 0;
-    font-size: 14px;
-    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
     text-align: center;
+    margin-right: 15px;
 }
 
-.p2{ /* Your existing styles */
-    margin: 0;
-    font-size: 14px;
-    text-align: center;
-}
-
-.MilkLife img, .tropicana-minyak img, .bango img, .gula-pasir img, .sania-beras img {
-    width: 100px;
-    height: 100px;
+.privilege-card img {
+    width: 50%;
+    height: auto;
     object-fit: contain;
-    margin: 0 auto 10px auto; /* Added bottom margin */
-    display: block;
+    margin-bottom: 10px;
 }
 
-.voucher-list2 p {
-    font-size: 12px;
-    text-align: center;
-    margin-top: 8px;
+.privilege-desc {
+    font-size: 14px;
+    font-weight: bold;
 }
-
-.pts {
-    background-color: #347928;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 15px;
-    text-align: center;
-    font-weight: bold;
-    width: fit-content;
-    margin: 8px auto 0 auto;
-    font-size: 8px;
-}
-/* ===== END OF VOUCHER STYLING MODIFICATIONS ===== */
-
 
 /* ===== BOTTOM NAVIGATION - UNCHANGED ===== */
 .bottom-nav {

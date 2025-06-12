@@ -38,7 +38,7 @@ const Widget = (props) => {
                     </div>
 
                     <div className="w-footer">
-                        <img src="/images/barcode.png" alt="barcode" />
+                        <img src="/images/barcode.jpeg" alt="barcode" />
                         <p className="valid-date">Valid until {props.validdate}</p>
                     </div>
 

@@ -17,7 +17,7 @@ const App = () => {
     return (
         <AppProvider>
             <Router>
-                <nav>
+                {/* <nav>
                     <Link to="/">Home</Link> |
                     <Link to="/activity">Activity</Link> |
                     <Link to="/login">Login</Link> |
@@ -26,7 +26,7 @@ const App = () => {
                     <Link to="/voucher">Voucher</Link> |
                     <Link to="/profile">Profile</Link> |
                     <Link to="/edit-profile">Edit Profile</Link>
-                </nav>
+                </nav> */}
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/activity" element={<Activity />} />

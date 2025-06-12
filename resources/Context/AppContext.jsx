@@ -52,7 +52,7 @@ export const AppProvider = ({ children }) => {
         localStorage.removeItem('token');
         setCurrentUser(null);
         // Optionally, navigate to login page:
-        // window.location.href = '/login'; // Simple redirect
+        window.location.href = '/login'; // Simple redirect
     };
 
 

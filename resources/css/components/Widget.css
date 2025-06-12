@@ -48,7 +48,7 @@ body {
 .w-card{
     max-width: 360px;
     width: 70%;
-    height: 55vh;
+    height: auto;
     position: relative;
     border-radius: 15px;
     background-color: var(--surface);
@@ -151,9 +151,10 @@ body {
 }
 
 .dashed-line{
+    display: flex;
     border: none;
     border-top: 2px dashed #ccc;
-    margin-top: 7.4vh;
+    margin-top: 4vh;
 }
 
 .w-footer{
@@ -162,7 +163,9 @@ body {
     flex-direction: column;
     text-align: center;
     line-height: 1.4;
+    margin-top: 1rem;
     padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .w-footer img{
@@ -176,6 +179,7 @@ body {
     font-size: 10px;
     color: grey;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .use-button{

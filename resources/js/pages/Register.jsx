@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../css/Register.css";
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Register = () => {
 
@@ -83,7 +84,7 @@ const Register = () => {
 
                             <div className="direct-link">
                                 <div className="Sign-in">
-                                    <p>Already have an account?<span className="sign-in"> Sign In</span></p>
+                                    <p>Already have an account?<span className="sign-in" onClick={() => navigate('/login')} style={{cursor: 'pointer'}}> Sign in</span></p>
                                 </div>
                             </div>
                         </form>
