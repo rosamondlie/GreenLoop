@@ -97,6 +97,13 @@ body {
   background-repeat: no-repeat;
 }
 
+#Upcoming{
+  background-image: url('/images/activity-img/bg-scheduled.png'); /* Using scheduled background image */
+  background-size: 130%;
+  background-position: 50% -7.5rem;
+  background-repeat: no-repeat;
+}
+
 #History{
   background-image: url('/images/activity-img/bg-history.png');
   background-size: 130%;
