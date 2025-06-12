@@ -204,14 +204,14 @@ export default function PickupPage() {
                             </p>
                         )}
                     </div>
-                    <div className="pickup-chevron">›</div>
+                    {/* <div className="pickup-chevron"></div> */}
                 </div>
             </div>
 
             {/* Display general form errors */}
             {errors.form && <p className="error-text form-error" style={{textAlign: 'center', color: 'red', margin: '10px 16px'}}>{errors.form}</p>}
 
-            <form onSubmit={handleSchedule} style={{padding: "0 16px"}}> {/* Added padding to form */}
+            <form onSubmit={handleSchedule} style={{padding: "0 16px"}} className='form-pickup'> {/* Added padding to form */}
                 <div className="pickup-section"> {/* Date Selection */}
                     <h3>Select Pickup Date</h3>
                     <select 

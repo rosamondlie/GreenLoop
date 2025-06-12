@@ -26,19 +26,25 @@ const UserHome = ({ user }) => {
                     <p>Hi! {user?.username || 'Guest'}</p>
                 </div>
                 <div className="icon-gr">
-                        <button className="icon-button">
-                            <img src="/images/notif.png" alt="Notifications" onClick={() => navigate('/activity')} />
-                        </button>
+                        <Link to="/activity">
+                            <button className="icon-button"><img src="/images/notif.png" alt="Notifications" onClick={() => navigate('/activity')} /></button>
+                        </Link>
+                        
                     {user && (
-                         <button className="icon-button" onClick={() => navigate('/profile')}><img src="images/profile.png" alt="Profile" /></button> 
+                        <Link to="/profile">
+                            <button className="icon-button"><img src="images/profile.png" alt="Profile" /></button>
+                        </Link>
+                        //  <button className="icon-button" onClick={() => navigate('/Profile')}><img src="images/profile.png" alt="Profile" /></button> 
                     )}
                 </div>
             </div>
 
             <section className="pickup-status">
+                <Link to="activity">
                 <div className="status-card">
-                    <p>No Scheduled Pick Up Today! <img src="/images/trash.png" alt="Trash icon" /></p>
+                        <button className="viewPickup-btn">View your pickup activity!</button>
                 </div>
+                </Link>
             </section>
 
             <section className="points-card">
@@ -47,10 +53,8 @@ const UserHome = ({ user }) => {
                     <span className="points-number">{user.points}</span>
                     <span className="points-unit">poin(s)</span>
                 </div>
-                <p className="expiry-date">expired date 13/07/2026</p>
+                {/* <p className="expiry-date">expired date 13/07/2026</p> */}
                 <div className="points-actions">
-                    <button className="history-btn">History</button>
-                    <span className="divider">|</span>
                     <Link to="/voucher">
                         <button className="redeem-btn">Redeem</button>
                     </Link>
@@ -70,18 +74,42 @@ const UserHome = ({ user }) => {
             <section className="news-update">
                 <h3>News Update</h3>
                 <p className="news-subtitle">What's Happening in Waste Management Today?</p>
-                <div className="news-grid">
-                    <div className="news-item">
-                        {/* Replace with actual news content or component */}
-                        <img src="/images/news_placeholder_1.jpg" alt="News 1" style={{width: '100%', height: 'auto', borderRadius: '8px'}}/>
-                        <p style={{marginTop: '5px'}}>Pandawara Group Cleans Up Trash in the Citarum River</p>
-                        <button className="read-more-btn" style={{marginTop: '10px'}}>Read more</button>
+
+                <div className="news">
+                    <div className="news-card">
+                        <img src="/images/pandawara.jpg" alt="news-img" />
+                        <div className="news-body">
+                            <p className="news-date">29th January 2025</p>
+                            <h2 className="news-headline">Pandawara Group Cleans Up Trash in the Citarum River</h2>
+                            <div className="view-link">
+                                <a href="https://www.liputan6.com/lifestyle/read/5899442/pandawara-group-bersihkan-sampah-di-sungai-citarum-selama-7-hari-habiskan-dana-rp106-juta" className="link-button">Read more</a>
+                            </div>
+                        </div>
                     </div>
-                    <div className="news-item">
-                        <img src="/images/news_placeholder_2.jpg" alt="News 2" style={{width: '100%', height: 'auto', borderRadius: '8px'}}/>
-                        <p style={{marginTop: '5px'}}>New plan for bins and recycling to be considered</p>
-                        <button className="read-more-btn" style={{marginTop: '10px'}}>Read more</button>
+
+                    <div className="news-card">
+                        <img src="/images/news2.jpg" alt="news-img" />
+                        <div className="news-body">
+                            <p className="news-date">18th May 2025</p>
+                            <h2 className="news-headline">New plan for bins and recycling to be considered</h2>
+                            <div className="view-link">
+                                <a href="https://www.bbc.com/news/articles/clyg1lxmv2eo" className="link-button">Read more</a>
+                            </div>
+                        </div>
                     </div>
+
+                    <div className="news-card">
+                        <img src="/images/sampah.jpg" alt="news-img" />
+                        <div className="news-body">
+                            <p className="news-date">3rd July 2025</p>
+                            <h2 className="news-headline">10 Ways to Reduce Plastic Pollution</h2>
+                            <div className="view-link">
+                                <a href="https://www.nrdc.org/stories/10-ways-reduce-plastic-pollution" className="link-button">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="navbar"></div>
                 </div>
             </section>
 
@@ -94,22 +122,22 @@ const UserHome = ({ user }) => {
                 </div>
                 <div className="privilege-container">
                     <div className="privilege-card">
-                        <img src="/images/logoKFC.png" alt="kfc"/>
+                        <img src="/images/kfc.jpg" alt="kfc"/>
                         <p className="privilege-desc">Get 25% off</p>
                     </div>
 
                     <div className="privilege-card">
-                        <img src="/images/logoMCD.png" alt="mcd"/>
+                        <img src="/images/mcd.jpg" alt="mcd"/>
                         <p className="privilege-desc">Get 25% off</p>
                     </div>
 
                     <div className="privilege-card">
-                        <img src="/images/logoVap.png" alt="kfc"/>
+                        <img src="/images/vap.jpg" alt="kfc"/>
                         <p className="privilege-desc">Get 25% off</p>
                     </div>
 
                     <div className="privilege-card">
-                        <img src="/images/logokopken.png" alt="kfc"/>
+                        <img src="/images/kopken.jpg" alt="kfc"/>
                         <p className="privilege-desc">Get 25% off</p>
                     </div>
                 </div>

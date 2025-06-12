@@ -97,7 +97,7 @@ const Voucher = () => {
     return(
         <div className="v-container">
         <div className="back-button">
-            <Link to="/"><img src="images/arrow.png" alt="back" /></Link>
+            <Link to="/"><img src="images/left-arrow.png" alt="back" /></Link>
         </div>
             <div className="bg-card"></div>
             <div className="p-card">
@@ -106,7 +106,7 @@ const Voucher = () => {
                     <h1 className="p-value">{userPoints}</h1>
                 </div>
                 <div className="card-img">
-                    <img src="images/food.png" alt="voucher-card-image" className="cd-image"/>
+                    <img src="images/voucher-card-image.jpg" alt="voucher-card-image" className="cd-image"/>
                 </div>
             </div>
             <div className="v-square">
@@ -131,7 +131,7 @@ const Voucher = () => {
                     </div>
 
                     <div className="LO-card">
-                        <img src="images/sunlight.png" alt="sunlight" className="image-sunlight"/>
+                        <img src="images/sunlight.jpg" alt="sunlight" className="image-sunlight"/>
                         <p className="points">40 Points</p>
                         <p className="desc">Sunlight Jeruk Nipis 800 ml</p>
                         <div className="redeem-button">
@@ -152,7 +152,7 @@ const Voucher = () => {
                 <p className="GR-cat">Groceries</p>
                 <div className="groceries">
                     <div className="GR-card">
-                        <img src="images/indomie.png" alt="indomie" className="image-indomie"/>
+                        <img src="images/indomie.jpg" alt="indomie" className="image-indomie"/>
                         <p className="points">15 Points</p>
                         <p className="desc">Indomie Goreng 85gr</p>
                         <div className="redeem-button">
@@ -191,7 +191,7 @@ const Voucher = () => {
                 <p className="R-cat">Restaurant</p>
                 <div className="restaurant">
                     <div className="R-card">
-                        <img src="images/logoKFC.png" alt="logoKFC" className="image-logoKFC"/>
+                        <img src="images/kfc.jpg" alt="logoKFC" className="image-logoKFC"/>
                         <p className="points">135 Points</p>
                         <p className="desc"> Get 25% off KFC now!</p>
                         <div className="redeem-button">
@@ -200,7 +200,7 @@ const Voucher = () => {
                     </div>
 
                     <div className="R-card">
-                        <img src="images/logoVap.png" alt="logoVap" className="image-logoVap"/>
+                        <img src="images/vap.jpg" alt="logoVap" className="image-logoVap"/>
                         <p className="points">175 Points</p>
                         <p className="desc">Get 50% off Vapiano now!</p>
                         <div className="redeem-button">
@@ -209,7 +209,7 @@ const Voucher = () => {
                     </div>
 
                     <div className="R-card">
-                        <img src="images/logoMCD.png" alt="logoMCD" className="image-logoMCD"/>
+                        <img src="images/mcd.jpg" alt="logoMCD" className="image-logoMCD"/>
                         <p className="points">120 Points</p>
                         <p className="desc">Get 35% off McDonalds now!</p>
                         <div className="redeem-button">
@@ -218,7 +218,7 @@ const Voucher = () => {
                     </div>
 
                     <div className="R-card">
-                        <img src="images/logokopken.png" alt="logoKopken" className="image-logoKopken"/>
+                        <img src="images/kopken.jpg" alt="logoKopken" className="image-logoKopken"/>
                         <p className="points">80 Points</p>
                         <p className="desc">Get 1 free Kopi Kenangan Coffee</p>
                         <div className="redeem-button">

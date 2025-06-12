@@ -300,7 +300,7 @@ export default function Activity() {
                   {filteredPickups.length === 0 ? (
                     <div className="scheduled-card">
                       {/* ... (empty state JSX) ... */}
-                       <img src={`/images/activity-img/${activeTab.toLowerCase().replace('upcoming','scheduled')}.png`} onError={(e) => { e.target.onerror = null; e.target.src='/images/activity-img/default.png'; }} alt={`${activeTab} activity placeholder`} />
+                       <img src={`/images/activity-img/${activeTab.toLowerCase().replace('upcoming','scheduled')}.png`} onError={(e) => { e.target.onerror = null; e.target.src='/images/activity-img/calender.png'; }} alt={`${activeTab} activity placeholder`} />
                         <div className="act-card-content">
                             <div className="scheduled-text-no">
                             No {activeTab} Activity...
@@ -313,8 +313,19 @@ export default function Activity() {
                 </div>
             </div>
             <nav className="bottom-nav">
-                {/* ... (your nav Links) ... */}
-            </nav>
+                            <Link to="/activity" className="nav-btn">
+                                <span className="nav-icon"><img src="/images/list.png" alt="Activity" /></span>
+                                <span className="nav-label">Activity</span>
+                            </Link>
+                            <Link to="/" className="nav-btn active">
+                                 <span className="nav-icon"><img src="/images/home.png" alt="Home" /></span>
+                                <span className="nav-label">Home</span>
+                            </Link>
+                            {/* <Link to="/voucher" className="nav-btn">
+                                <span className="nav-icon"><img src="/images/redeem.png" alt="Redeem" /></span>
+                                <span className="nav-label">Redeem</span>
+                            </Link> */}
+                        </nav>
         </div>
     );
 }

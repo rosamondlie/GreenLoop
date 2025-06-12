@@ -47,7 +47,7 @@ export const voucherData = {
   },
 
   indomie: {
-    logo: "/images/indomie.png",
+    logo: "/images/indomie.jpg",
     description: "Get free Indomie",
     list1: "Redeemable at all Indomaret",
     list2: "Not valid with other discounts",
