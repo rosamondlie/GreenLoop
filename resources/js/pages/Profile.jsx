@@ -54,7 +54,7 @@ export default function Profile() {
             <div className='p-atas'>
                 <div className="back-div">
                     <img src="images/profile/back-icon.png" alt="back-icon" />
-                    <a href="/">Back</a>
+                    <a href="/home">Back</a>
                 </div>
                 <h2>PROFILE</h2>
 

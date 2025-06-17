@@ -97,7 +97,7 @@ const Voucher = () => {
     return(
         <div className="v-container">
         <div className="back-button">
-            <Link to="/"><img src="images/left-arrow.png" alt="back" /></Link>
+            <Link to="/home"><img src="images/left-arrow.png" alt="back" /></Link>
         </div>
             <div className="bg-card"></div>
             <div className="p-card">

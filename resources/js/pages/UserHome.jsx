@@ -148,7 +148,7 @@ const UserHome = ({ user }) => {
                     <span className="nav-icon"><img src="/images/list.png" alt="Activity" /></span>
                     <span className="nav-label">Activity</span>
                 </Link>
-                <Link to="/" className="nav-btn active">
+                <Link to="/home" className="nav-btn active">
                      <span className="nav-icon"><img src="/images/home.png" alt="Home" /></span>
                     <span className="nav-label">Home</span>
                 </Link>

@@ -111,7 +111,7 @@ const CourierHome = ({ user }) => {
                     <span className="nav-icon"><img src="/images/list.png" alt="Activity" /></span>
                     <span className="nav-label">Activity</span>
                 </Link>
-                <Link to="/" className="nav-btn">
+                <Link to="/home" className="nav-btn">
                      <span className="nav-icon"><img src="/images/home.png" alt="Home" /></span>
                     <span className="nav-label">Home</span>
                 </Link>

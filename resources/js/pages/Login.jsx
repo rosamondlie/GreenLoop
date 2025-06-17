@@ -29,7 +29,7 @@ const Login = () => {
             setErrors(data.errors);
         } else if (data.user && data.token) { // Check for user and token
             loginUser(data.user, data.token); // <-- SET USER IN CONTEXT
-            navigate("/");
+            navigate("/home");
             console.log(data);
         } else {
             // Handle other unexpected responses

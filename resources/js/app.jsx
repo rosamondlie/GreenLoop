@@ -28,11 +28,11 @@ const App = () => {
                     <Link to="/edit-profile">Edit Profile</Link>
                 </nav> */}
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Register />} />
                     <Route path="/activity" element={<Activity />} />
                     <Route path="/pickup" element={<Pickup />} />
                     <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
+                    <Route path="/home" element={<Home />} />
                     <Route path="/voucher" element={<Voucher />} />
                     <Route path="/profile" element={<Profile />}/>
                     <Route path="/edit-profile" element={<EditProfile />}/>
