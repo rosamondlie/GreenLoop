@@ -8,3 +8,5 @@ That’s why Rosamond Patricia Selamat Lie, Jonathan William, Rayya Al Ghazali, 
 📚 Learn through educational features to boost recycling awareness
 
 Under the guidance of our lecturer, Mr. Anderies Notanto. Eng., S.Kom., M.Kom. and Mrs. Irma Kartika Wairooy S.Kom., M.T.I., we applied key software engineering principles—using the Agile SCRUM framework to manage development, employing design and requirement models to shape the solution, ensuring system reliability and security, and leveraging modern tools like React.js, Laravel, and MySQL to deliver a functional MVP.
+
+![image alt](https://github.com/rosamondlie/GreenLoop/blob/34bfefd59fabf2c8827b1021cd18232fddf9730b/Slide%2016_9%20-%201.png)
