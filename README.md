@@ -1,4 +1,5 @@
-##GREENLOOP
+## GREENLOOP
+
 🏙 In many urban communities, good intentions often meet poor systems. People want to recycle, but don’t know where or how. Others sort their waste, only to struggle with inconvenient drop-offs. And even the most motivated eco-warriors rarely get recognition for their efforts.
 
 That’s why Rosamond Patricia Selamat Lie, Jonathan William, Rayya Al Ghazali, Verlica Teo, and I created GreenLoop —a digital platform designed for our Software Engineering and Agile Methodology course to improve waste management through technology. GreenLoop allows users to:
